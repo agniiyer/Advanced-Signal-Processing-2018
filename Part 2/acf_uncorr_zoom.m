@@ -1,0 +1,10 @@
+x = randn(1000,1);
+r = xcorr(x,'unbiased');
+plot([-999:1:999],r);
+axis([-50 50 -1 1.5]);
+zoom on;
+grid on;
+grid minor;
+xlabel('Tau (Time Lag)');
+ylabel('Signal Amplitude');
+title('Unbiased ACF of 1000 WGN samples');
